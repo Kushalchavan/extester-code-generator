@@ -1,3 +1,20 @@
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License", destination); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 import * as vscode from 'vscode';
 import { Logger } from '../logger/logger';
 
@@ -60,17 +77,6 @@ export class GeneratorViewProvider implements vscode.TreeDataProvider<vscode.Tre
 		};
 		fixCompilationItem.iconPath = new vscode.ThemeIcon('tools');
 
-		// // Create a tree item for running tests
-		// const runTestsItem = new vscode.TreeItem(
-		//   "Run Tests",
-		//   vscode.TreeItemCollapsibleState.None
-		// );
-		// runTestsItem.command = {
-		//   command: "extester-test-generator.runTests",
-		//   title: "Run Tests",
-		// };
-		// runTestsItem.iconPath = new vscode.ThemeIcon("play");
-
 		// Create a tree item for fixing runtime failures
 		const fixRuntimeItem = new vscode.TreeItem('Fix Runtime Failures', vscode.TreeItemCollapsibleState.None);
 		fixRuntimeItem.command = {
@@ -79,7 +85,6 @@ export class GeneratorViewProvider implements vscode.TreeDataProvider<vscode.Tre
 		};
 		fixRuntimeItem.iconPath = new vscode.ThemeIcon('debug-console');
 
-		// return Promise.resolve([testProposalItem, runTestsItem, fixCompilationItem, fixRuntimeItem]);
 		return Promise.resolve([testProposalItem, fixCompilationItem, fixRuntimeItem]);
 	}
 

@@ -60,7 +60,7 @@
         {
           "id": "extester-test-generator-view",
           "title": "ExTester Test Generator view",
-          "icon": "resources/logo.svg"
+          "icon": "resources/logo_512.png"
         }
       ]
     },
@@ -92,20 +92,20 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
-    "@types/node": "^20.17.32",
+    "@types/node": "^25.0.3",
     "@types/vscode": "^1.99.0",
-    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/eslint-plugin": "^8.52.0",
     "@typescript-eslint/parser": "^8.31.1",
-    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.5.2",
-    "esbuild": "^0.25.3",
-    "eslint": "^9.25.1",
+    "esbuild": "^0.27.2",
+    "eslint": "^9.39.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.6.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "glob": "^11.0.3",
+    "glob": "^11.1.0",
     "openai": "^4.97.0"
   }
 }
