@@ -1,9 +1,10 @@
 {
-  "name": "extester-test-generator",
-  "displayName": "ExTester Test Generator",
+  "name": "extester-code-generator",
+  "displayName": "ExTester Code Generator",
+  "icon": "resources/logo_512.png",
   "description": "Generate UI tests for VS Code extensions using AI and ExTester framework.",
   "preview": true,
-  "version": "0.1.0",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/pospisilf/extester-code-generator.git"
@@ -20,14 +21,14 @@
   "main": "./dist/extension.js",
   "contributes": {
     "configuration": {
-      "title": "ExTester Test Generator",
+      "title": "ExTester Code Generator",
       "properties": {
-        "extester-test-generator.apiKey": {
+        "extester-code-generator.apiKey": {
           "type": "string",
           "default": "",
           "markdownDescription": "Your OpenAI API Key."
         },
-        "extester-test-generator.maxGeneratedTests": {
+        "extester-code-generator.maxGeneratedTests": {
           "type": [
             "number",
             "null"
@@ -39,33 +40,33 @@
     },
     "commands": [
       {
-        "command": "extester-test-generator.generateTestProposals",
+        "command": "extester-code-generator.generateTestProposals",
         "title": "Generate Test Proposals"
       },
       {
-        "command": "extester-test-generator.fixCompilationIssues",
+        "command": "extester-code-generator.fixCompilationIssues",
         "title": "Fix Compilation Issues"
       },
       {
-        "command": "extester-test-generator.fixRuntimeFailures",
+        "command": "extester-code-generator.fixRuntimeFailures",
         "title": "Fix Runtime Failures"
       },
       {
-        "command": "extester-test-generator.runAndFixTests",
+        "command": "extester-code-generator.runAndFixTests",
         "title": "Run and Fix Tests"
       }
     ],
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "extester-test-generator-view",
-          "title": "ExTester Test Generator view",
+          "id": "extester-code-generator-view",
+          "title": "ExTester Code Generator view",
           "icon": "resources/logo_512.png"
         }
       ]
     },
     "views": {
-      "extester-test-generator-view": [
+      "extester-code-generator-view": [
         {
           "id": "generator-view",
           "name": "Generator View",
@@ -92,20 +93,20 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
-    "@types/node": "^25.0.3",
+    "@types/node": "^25.0.9",
     "@types/vscode": "^1.99.0",
-    "@typescript-eslint/eslint-plugin": "^8.52.0",
-    "@typescript-eslint/parser": "^8.31.1",
+    "@typescript-eslint/eslint-plugin": "^8.53.0",
+    "@typescript-eslint/parser": "^8.53.0",
     "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.5.2",
     "esbuild": "^0.27.2",
     "eslint": "^9.39.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.6.2",
+    "prettier": "^3.8.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "glob": "^11.1.0",
-    "openai": "^4.97.0"
+    "glob": "^13.0.0",
+    "openai": "^6.16.0"
   }
 }
